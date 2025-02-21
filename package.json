@@ -1,0 +1,27 @@
+{
+  "name": "news-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@/components/ui/card": "^version",
+    "@/components/ui/button": "^version",
+    "lucide-react": "^version",
+    "@google-cloud/text-to-speech": "^5.8.0",
+    "@google-cloud/translate": "^8.5.0",
+    "@google/generative-ai": "^0.21.0",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "openai": "^4.85.1"
+  }
+}

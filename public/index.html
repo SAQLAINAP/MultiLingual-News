@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Library - Your Daily Digest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- <style>
+        /* Landing page styles */
+        .hero-section {
+            background: linear-gradient(135deg, #0062cc, #0097e6);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .features-section {
+            padding: 3rem 2rem;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .testimonials-section {
+            padding: 3rem 2rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            background-color: #ddd;
+        }
+        
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .author-position {
+            font-size: 0.875rem;
+            color: #666;
+        }
+        
+        .app-demo-section {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: #f0f7ff;
+        }
+        
+        .demo-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #0062cc, transparent);
+            margin: 3rem 0;
+        }
+        
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0062cc;
+            text-decoration: none;
+        }
+        
+        .navbar-logo span {
+            margin-left: 0.5rem;
+        }
+        
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .navbar-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-link:hover {
+            color: #0062cc;
+        }
+        
+        .navbar-button {
+            background-color: #0062cc;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-button:hover {
+            background-color: #004e9e;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">
+            📰 <span>NewsLibrary</span>
+        </a>
+        <div class="navbar-links">
+            <a href="#features" class="navbar-link">Features</a>
+            <a href="#testimonials" class="navbar-link">Testimonials</a>
+            <a href="#demo" class="navbar-link">Demo</a>
+            <a href="#app" class="navbar-link">App</a>
+        </div>
+        <button class="navbar-button">Get Started</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Stay Informed, Stay Ahead</h1>
+        <p class="hero-subtitle">NewsLibrary brings you curated news from trusted sources, all in one place.</p>
+        <a href="#app" class="cta-button">Try It Now</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <h2 class="section-title">Why Choose NewsLibrary?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3 class="feature-title">Smart Search</h3>
+                <p class="feature-description">Find exactly what you're looking for with our advanced keyword search functionality.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Categorized Content</h3>
+                <p class="feature-description">Browse news by category to focus on topics that matter most to you.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">Smart Summaries</h3>
+                <p class="feature-description">Get concise summaries of multiple articles to save time while staying informed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3 class="feature-title">Audio Conversion</h3>
+                <p class="feature-description">Convert articles to audio format so you can listen on the go.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3 class="feature-title">Real-time Updates</h3>
+                <p class="feature-description">Stay up-to-date with the latest news as it happens around the world.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3 class="feature-title">Global Coverage</h3>
+                <p class="feature-description">Access news from multiple countries and perspectives for a complete worldview.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+  <!-- Testimonials Section -->
+<section class="testimonials-section" id="testimonials">
+    <h2 class="section-title">What Our Users Say</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"NewsLibrary has transformed how I consume news. The categorization and summary features save me so much time!"</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Priya Sharma</span>
+                    <span class="author-position">Marketing Manager, Mumbai</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"I love the audio feature. I can catch up on news during my commute without having to read on my phone."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Rahul Verma</span>
+                    <span class="author-position">Software Engineer, Delhi</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"As a researcher, I need reliable information quickly. NewsLibrary's search and categorization tools are invaluable to my work."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Dr. Anjali Rao</span>
+                    <span class="author-position">Research Scientist, Bangalore</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"The global coverage is amazing! I can read news from multiple countries and perspectives in one place."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Arjun Patel</span>
+                    <span class="author-position">Entrepreneur, Ahmedabad</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"The summaries are so concise and accurate. I can stay informed without spending hours reading."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Kavita Singh</span>
+                    <span class="author-position">Teacher, Kolkata</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"The audio feature is a game-changer for me. I listen to news while cooking or commuting."</p>
+            <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <span class="author-name">Suresh Kumar</span>
+                    <span class="author-position">Banker, Chennai</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- App Demo Section -->
+    <section class="app-demo-section" id="demo">
+        <h2 class="section-title">See NewsLibrary in Action</h2>
+        <p>Our intuitive interface makes finding and consuming news easier than ever.</p>
+        <img src="/api/placeholder/800/500" alt="NewsLibrary Demo" class="demo-image">
+        <a href="#app" class="cta-button">Try It Yourself</a>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Original App (preserved) -->
+    <div class="app-container" id="app">
+        <div class="container">
+            <header>
+                <h1>📰 News Library</h1>
+                <div class="search-container">
+                    <input type="text" id="search-box" placeholder="Enter keyword...">
+                    <button id="fetch-news-button">🔍 Fetch News</button>
+                </div>
+                <div class="category-buttons">
+                    <button class="category-button" data-category="business">💼 Business</button>
+                    <button class="category-button" data-category="health">🏥 Healthcare</button>
+                    <button class="category-button" data-category="politics">🏛️ Politics</button>
+                    <button class="category-button" data-category="science">🔬 Science</button>
+                    <button class="category-button" data-category="technology">💻 Technology</button>
+                    <button class="category-button" data-category="education">🎓 Education</button>
+                </div>
+            </header>
+            <main>
+                <div class="content">
+                    <div id="news-results"></div>
+                    <div id="summary-box" style="display: none;">
+                        <h2>📝 Summary</h2>
+                        <ul id="summary-list"></ul>
+                    </div>
+                </div>
+                <div id="action-buttons" style="display: none;">
+                    <button id="summarize-button">📜 Summarize News</button>
+                    <button id="generate-audio-button">🎙️ Generate Audio</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #232946; color: white; padding: 3rem 2rem; margin-top: 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div>
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">📰 NewsLibrary</h3>
+                <p style="line-height: 1.6; opacity: 0.8;">Your trusted companion for staying informed and up-to-date with global events, all in one convenient place.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Quick Links</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#features" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Features</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#testimonials" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">Testimonials</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#app" style="color: white; text-decoration: none; opacity: 0.8; transition: opacity 0.3s ease;">App</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Contact Us</h4>
+                <p style="line-height: 1.6; opacity: 0.8;">Email: jalagaraniggesh@gmail.com</p>
+                <p style="line-height: 1.6; opacity: 0.8;">Phone: +91 6160 420 069</p>
+                <p style="line-height: 1.6; opacity: 0.8;">Address: Pattangere Shed, RR Nagar Road, Bangalore - 560032</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Newsletter</h4>
+                <p style="line-height: 1.6; opacity: 0.8; margin-bottom: 1rem;">Subscribe to our newsletter for weekly updates and tips.</p>
+                <div style="display: flex;">
+                    <input type="email" placeholder="Your email" style="padding: 0.75rem; border: none; border-radius: 4px 0 0 4px; width: 100%;">
+                    <button style="background-color: #ff6b6b; color: white; border: none; padding: 0.75rem 1rem; border-radius: 0 4px 4px 0; cursor: pointer;">→</button>
+                </div>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 3rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.6;">
+            <p>© 2025 NewsLibrary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
